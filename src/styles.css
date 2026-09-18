@@ -1,0 +1,38 @@
+:root {
+  --color-primario: #2563eb;
+  --color-primario-oscuro: #1d4ed8;
+  --color-fondo: #f4f6f9;
+  --color-texto: #1f2937;
+  --color-texto-suave: #4b5563;
+  --color-borde: #cbd5e1;
+  --color-error: #d32f2f;
+  --color-exito: #2e7d32;
+  --color-exito-fondo: #e6f4ea;
+  --color-blanco: #ffffff;
+  --radio: 8px;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+app-root {
+  display: block;
+}

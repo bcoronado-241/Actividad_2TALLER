@@ -1,0 +1,56 @@
+<form [formGroup]="productoForm" (ngSubmit)="onSubmit()">
+
+  <div class="campo">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" formControlName="nombre">
+
+    <div class="error" *ngIf="f['nombre'].invalid && (f['nombre'].touched || enviado)">
+      <p *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio.</p>
+      <p *ngIf="f['nombre'].errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</p>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="descripcion">Descripción</label>
+    <textarea id="descripcion" formControlName="descripcion"></textarea>
+
+    <div class="error" *ngIf="f['descripcion'].invalid && (f['descripcion'].touched || enviado)">
+      <p *ngIf="f['descripcion'].errors?.['required']">La descripción es obligatoria.</p>
+      <p *ngIf="f['descripcion'].errors?.['minlength']">Debe tener al menos 10 caracteres.</p>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="precio">Precio</label>
+    <input id="precio" type="number" formControlName="precio">
+
+    <div class="error" *ngIf="f['precio'].invalid && (f['precio'].touched || enviado)">
+      <p *ngIf="f['precio'].errors?.['required']">El precio es obligatorio.</p>
+      <p *ngIf="f['precio'].errors?.['min']">El precio debe ser mayor a 0.</p>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="categoria">Categoría</label>
+    <input id="categoria" type="text" formControlName="categoria">
+
+    <div class="error" *ngIf="f['categoria'].invalid && (f['categoria'].touched || enviado)">
+      <p *ngIf="f['categoria'].errors?.['required']">La categoría es obligatoria.</p>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="stock">Stock</label>
+    <input id="stock" type="number" formControlName="stock">
+
+    <div class="error" *ngIf="f['stock'].invalid && (f['stock'].touched || enviado)">
+      <p *ngIf="f['stock'].errors?.['required']">El stock es obligatorio.</p>
+      <p *ngIf="f['stock'].errors?.['min']">El stock no puede ser negativo.</p>
+    </div>
+  </div>
+
+  <button type="submit">Registrar producto</button>
+
+  <p class="exito" *ngIf="mensajeExito">{{ mensajeExito }}</p>
+
+</form>

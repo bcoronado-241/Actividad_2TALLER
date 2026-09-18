@@ -1,0 +1,12 @@
+header {
+  background: linear-gradient(90deg, var(--color-primario), var(--color-primario-oscuro));
+  color: var(--color-blanco);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

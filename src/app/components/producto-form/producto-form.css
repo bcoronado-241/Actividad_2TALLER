@@ -1,0 +1,93 @@
+form {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.campo label {
+  margin-bottom: 0.375rem;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-texto);
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12);
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border-color: var(--color-exito);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+.error {
+  margin-top: 0.35rem;
+}
+
+.error p {
+  margin: 0.125rem 0;
+  color: var(--color-error);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+.exito {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-exito-fondo);
+  color: var(--color-exito);
+  border: 1px solid #a5d6a7;
+  border-radius: var(--radio);
+  font-weight: 500;
+}
